@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routers
+app.get('/', (req, res, next) => {
+    res.send('Welcome to my Api Youtute - Author DatDuc');
+});
 app.use('/', watchesRouter);
 app.use('/', usersRouter);
 
