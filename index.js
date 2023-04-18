@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import watchesRouter from './routers/watchesRouter.js';
+import usersRouter from './routers/usersRouter.js';
 
 // Default
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json());
 
 // Routers
 app.use('/', watchesRouter);
+app.use('/', usersRouter);
 
 //Connect to mongoDB
 const URI = 'mongodb+srv://admin:datyeudat2303@database1.oqnrpnl.mongodb.net/youtube';
