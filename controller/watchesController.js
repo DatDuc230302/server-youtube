@@ -20,7 +20,7 @@ export const getOneWatches = async (req, res, next) => {
 
 export const searchWatches = async (req, res, next) => {
     const result = await watches.find({
-        $or: [{ content: { $regex: req.params.key } }],
+        $or: [{ content: { $regex: req.params.key, $options: 'i' } }],
     });
     res.send(result);
 };
